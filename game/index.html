@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prism Escape</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="screen-start" class="screen">
+    <canvas id="menu-canvas"></canvas>
+    <h1>PRISM ESCAPE</h1>
+    <p>Dodge the falling hazards. Survive as long as you can.</p>
+    <p class="controls-hint">WASD / Arrow Keys to move</p>
+    <div id="theme-picker">
+      <span class="theme-label">THEME</span>
+      <button class="theme-btn selected" data-theme="classic">CLASSIC</button>
+      <button class="theme-btn" data-theme="prism">PRISM</button>
+      <button class="theme-btn" data-theme="cosmic">COSMIC</button>
+    </div>
+    <button id="btn-start">START</button>
+  </div>
+
+  <div id="screen-game" class="screen hidden">
+    <canvas id="canvas"></canvas>
+    <div id="hud">
+      <span id="score">0</span>
+    </div>
+  </div>
+
+  <div id="screen-dead" class="screen hidden">
+    <canvas id="death-canvas"></canvas>
+    <h1>WASTED</h1>
+    <p>Score: <span id="final-score">0</span></p>
+    <button id="btn-restart">RETRY</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
